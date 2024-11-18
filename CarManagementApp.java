@@ -30,13 +30,13 @@ public class CarManagementApp {
 				setNotFixed(carList);
 			} else if (c == 8) {
 				displayProfit(carList);
+			} else if (c == 9){
+				System.out.println("Goodbye");
+				break;
+			} else {
+				System.out.println("Invalid choice");
 			}
 		}
-		
-		if (c == 9) {
-			System.out.println("Goodbye");
-		}
-		
 		sc.close();
 	}
 
