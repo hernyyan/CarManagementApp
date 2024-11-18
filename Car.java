@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 public class Car {
 
 	private String name;
@@ -52,6 +53,8 @@ public class Car {
 	}
 	
 	public void printme() {
+		DecimalFormat twodp = new DecimalFormat("#.##");
+
 		System.out.println("----------------------------------------");
 		System.out.println("Car name: " + name);
 		System.out.println("Car ID: " + id);
@@ -60,7 +63,7 @@ public class Car {
 		} else {
 			System.out.println("Car status: not fixed");
 		}
-		System.out.println("Car service fee: " + fee);
+		System.out.println("Car service fee: $" + twodp.format(fee));
 		System.out.println("----------------------------------------");
 	}
 }
