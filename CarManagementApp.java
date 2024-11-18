@@ -133,6 +133,7 @@ public class CarManagementApp {
 		int editcarid = 0, editparam = 0, editid;
 		double editfee = 0;
 		boolean found = false;
+		boolean repeat = false;
 		
 		while (!found) {
 			System.out.println("Enter car ID: ");
@@ -167,9 +168,23 @@ public class CarManagementApp {
 			editname = sc.nextLine();
 			editcar.setName(editname);
 		} else if (editparam == 2) {
-			System.out.println("Enter the new car ID: ");
-			editid = sc.nextInt();
-			sc.nextLine();
+			do {
+							
+				System.out.println("Enter new car ID: ");
+				editid = sc.nextInt();
+				sc.nextLine();
+							
+				repeat = false;
+							
+				for (int k = 0; k < carList.length; k++) {
+					if (carList[k] != null && editid == carList[k].getId()) {
+						repeat = true;
+						System.out.println("This ID already exists");
+						break;
+					}
+				}
+			} while(repeat);
+			
 			editcar.setId(editid);
 		} else if (editparam == 3) {
 			editfee = sc.nextDouble();
