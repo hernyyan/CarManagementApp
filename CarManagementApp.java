@@ -244,7 +244,7 @@ public class CarManagementApp {
 			  }
 			  // if index does not change, have user input another id 
 			  if (index == -1) {
-				  System.out.print("Car not found, try again");
+				  System.out.println("Car not found, try again");
 			  } 		  
 		  }
 		  // if id was found 
@@ -283,7 +283,7 @@ public class CarManagementApp {
 				  }
 			  }
 			  if (index == -1) {
-				  System.out.print("Car not found, try again");
+				  System.out.println("Car not found, try again");
 			  } 		  
 		  }
 		  
