@@ -1,18 +1,21 @@
 import java.text.DecimalFormat;
 public class Car {
-
+	
+	//car properties
 	private String name;
 	private int id;
 	private boolean status;
 	private double fee;
-	
+
+	//constructor default values
 	public Car() {
 		name = "";
 		id = 0;
 		status = false;
 		fee = 0;
 	}
-	
+
+	//constructor to initialize car attributes
 	public Car(String namee, int carid, boolean s, double sf) {
 		this.name = namee;
 		this.id = carid;
@@ -20,6 +23,7 @@ public class Car {
 		this.fee = sf;
 	}
 
+	//getters and setters
 	public String getName() {
 		return name;
 	}
@@ -51,7 +55,8 @@ public class Car {
 	public void setFee(double fee) {
 		this.fee = fee;
 	}
-	
+
+	//method to print car properties
 	public void printme() {
 		DecimalFormat twodp = new DecimalFormat("#.##");
 
