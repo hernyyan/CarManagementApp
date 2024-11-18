@@ -221,7 +221,7 @@ public class CarManagementApp {
 
 	//method to set specific car to fixed
 	public static void setFixed(Car[] carList) {
-		  // initiliaze scanner
+		  // initialize scanner
 		  Scanner sc = new Scanner(System.in);
 		  // initialize found and index variable
 		  boolean found = false; 
@@ -361,7 +361,7 @@ public class CarManagementApp {
 		
 		double total = 0;
 
-		// if status of car is not fixed, add the service fee to totoal
+		// if status of car is not fixed, add the service fee to total
 		for (int i = 0; i < carList.length; i ++) {
 			if (carList[i]!= null && !carList[i].isStatus()) {
 				total += carList[i].getFee();
