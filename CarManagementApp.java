@@ -23,25 +23,25 @@ public class CarManagementApp {
 
 			//add car
 			if (c == 1) {
-				addCar(carList);
+				addCar(sc, carList);
 			//edit car
 			} else if (c == 2) {
-				editCar(carList);
+				editCar(sc, carList);
 			//set specific car to fixed
 			} else if (c == 3) {
-				setFixed(carList);
+				setFixed(sc, carList);
 			//display all cars
 			} else if (c == 4) {
 				displayCars(carList);
 			//delete a car using id
 			} else if (c == 5) {
-				deleteCar(carList);
+				deleteCar(sc, carList);
 			//display cars with service cost > certain price 
 			} else if (c == 6) {
-				expensiveFixes(carList);
+				expensiveFixes(sc, carList);
 			//set specific car to not fixed 
 			} else if (c == 7){
-				setNotFixed(carList);
+				setNotFixed(sc, carList);
 			//display profit from fixing the cars
 			} else if (c == 8) {
 				displayProfit(carList);
@@ -83,10 +83,8 @@ public class CarManagementApp {
 	}
 
 	//method to add car 
-	public static void addCar(Car[] carList) {
-		
-		Scanner sc = new Scanner(System.in);
-		
+	public static void addCar(Scanner sc, Car[] carList) {
+				
 		boolean full = true, validid = false, repeat = false, newstatus = false;
 		String newname = "";
 		int newid = 0;
@@ -145,10 +143,8 @@ public class CarManagementApp {
 	}
 
 	//method to edit car
-	public static void editCar(Car[] carList) {
-		
-		Scanner sc = new Scanner(System.in);
-		
+	public static void editCar(Scanner sc, Car[] carList) {
+				
 		Car editcar = null;
 		String editname = "";
 		int editcarid = 0, editparam = 0, editid;
@@ -222,9 +218,8 @@ public class CarManagementApp {
 	}
 
 	//method to set specific car to fixed
-	public static void setFixed(Car[] carList) {
-		  // initialize scanner
-		  Scanner sc = new Scanner(System.in);
+	public static void setFixed(Scanner sc, Car[] carList) {
+
 		  // initialize found and index variable
 		  boolean found = false; 
 		  int index = -1; 
@@ -267,9 +262,8 @@ public class CarManagementApp {
 	}
 
 	//method to set specific car to not fixed
-	public static void setNotFixed(Car[] carList) {
+	public static void setNotFixed(Scanner sc, Car[] carList) {
 		  // same logic as setFixed method
-		  Scanner sc = new Scanner(System.in);
 		  boolean found = false; 
 		  int index = -1; 
 		  
@@ -315,10 +309,9 @@ public class CarManagementApp {
 	}
 
 	//method to delete a car
-	public static void deleteCar (Car [] carList) {
+	public static void deleteCar (Scanner sc, Car [] carList) {
 	    int input;
 	    boolean deleteStatus = false;
-	    Scanner sc = new Scanner (System.in);
 
 	//enter id
 	    System.out.println("Enter the ID of the car you wish to delete: ");
@@ -340,9 +333,7 @@ public class CarManagementApp {
 	}
 
 	//method to display cars with service fees that exceed specified amount
-	public static void expensiveFixes(Car[] carList) {
-
-	    Scanner sc = new Scanner(System.in);
+	public static void expensiveFixes(Scanner sc, Car[] carList) {
 
 	//get specified price
 	    System.out.println("Enter specified price: ");
