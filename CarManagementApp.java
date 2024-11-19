@@ -19,7 +19,7 @@ public class CarManagementApp {
 		while (c != 9) {
 
 			//call menu method
-			c = menu();
+			c = menu(sc);
 
 			//add car
 			if (c == 1) {
@@ -58,9 +58,7 @@ public class CarManagementApp {
 	}
 
 	//method for the menu
-	public static int menu() {
-
-		Scanner sc = new Scanner(System.in);
+	public static int menu(Scanner sc) {
 		
 		System.out.println("----------------------------------------");
 		System.out.println("Menu:");
