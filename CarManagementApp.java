@@ -79,6 +79,7 @@ public class CarManagementApp {
 		System.out.println("Select an option: ");
 		int choice = sc.nextInt();
 		sc.nextLine();
+		sc.close();
 		return choice;	
 	}
 
@@ -142,6 +143,7 @@ public class CarManagementApp {
 		} else {
 			System.out.println("System is full, delete a car first");
 		}
+		sc.close();
 	}
 
 	//method to edit car
@@ -219,6 +221,7 @@ public class CarManagementApp {
 		//print updated version
 		System.out.println("Updated car details:");
 		editcar.printme();
+		sc.close();
 	}
 
 	//method to set specific car to fixed
@@ -264,6 +267,7 @@ public class CarManagementApp {
 				  System.out.println("Car status was already fixed, no changes made.");
 			  }
 		  }
+		  sc.close();
 	}
 
 	//method to set specific car to not fixed
@@ -301,6 +305,7 @@ public class CarManagementApp {
 				  System.out.println("Car status was already not fixed, no changes made.");
 			  }
 		  }
+		  sc.close();
 	}
 
 	//method to display all cars in array 
@@ -337,6 +342,7 @@ public class CarManagementApp {
 	    if (deleteStatus == false) {
 	        System.out.println("A car with the entered ID does not exist in the system.");
 	    }
+ 	    sc.close();
 	}
 
 	//method to display cars with service fees that exceed specified amount
@@ -353,6 +359,7 @@ public class CarManagementApp {
 	    		carList[i].printme();
 	    	}
 	    }
+	    sc.close();
 	}
 
 	//method to display profit from fixing cars
