@@ -1,3 +1,5 @@
+Juliette Yang, Kim Nguyen, Katherin Suk, & Henry Yan
+
 import java.util.*;
 import java.text.DecimalFormat;
 
