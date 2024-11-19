@@ -1,4 +1,4 @@
-Juliette Yang, Kim Nguyen, Katherine Suk, & Henry Yan
+// Juliette Yang, Kim Nguyen, Katherine Suk, & Henry Yan
 
 import java.util.*;
 import java.text.DecimalFormat;
